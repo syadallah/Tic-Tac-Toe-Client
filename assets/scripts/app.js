@@ -5,7 +5,12 @@
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
-
+const gameEvents = require('./game/events')
 $(() => {
+  $('#change-password').hide()
+  $('#sign-out').hide()
+  $('.container').hide()
+  $('#start-game').hide()
   // your JS code goes here
+  gameEvents.addHandlers()
 })

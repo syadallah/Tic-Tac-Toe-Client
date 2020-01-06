@@ -1,1 +1,46 @@
 @import '~bootstrap/scss/bootstrap';
+
+$alt-color: $cyan;
+$body-bg-color: $gray-200;
+$font-color: $light;
+
+body {
+  background-color: $body-bg-color;
+}
+
+.box {
+  align-items: center;
+  background-color: $secondary;
+  border: 1px solid $white;
+  color: $font-color;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+}
+
+.alt-color {
+  background-color: $alt-color;
+}
+
+h1 {
+  text-align: center;
+  background-color: #00f;
+  color: #fff;
+
+}
+
+#message {
+  text-align: center;
+  color: #4F8A10;
+  background-color: #DFF2BF;
+}
+
+#failure-message {
+  font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+  color: #D8000C;
+  background-color: #FFD2D2;
+}
+#start-game {
+  text-align: center;
+}
