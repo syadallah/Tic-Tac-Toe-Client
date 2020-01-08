@@ -1,4 +1,6 @@
 'use strict'
+const board = []
+const player1 = 'X'
 const api = require('./api')
 const ui = require('./ui')
 const getFormsFields = require('./../../../lib/get-form-fields')
@@ -45,11 +47,19 @@ const onSignOut = function (event) {
 // StartGame
 const onStartGame = function (event) {
   event.preventDefault()
-  const form = event.target
-  const data = getFormsFields(form)
-  api.onStartGame(data)
-    .then(ui.startGame)
-    .catch(ui.signInFailure)
+
+  api.startGame()
+    .then(ui.startGameSuccess)
+    .catch(ui.startGameFailure)
+}
+
+const onClickBox = function (event) {
+  event.preventDefault()
+  if (!this.innerHTML) {
+    this.innerHTML = player1
+    $('#message').text('')
+    console.log('')
+  }
 }
 const addHandlers = function () {
   $('#sign-in').on('submit', onSignIn)
@@ -57,6 +67,15 @@ const addHandlers = function () {
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
   $('#start-game').on('submit', onStartGame)
+  $('#0').on('click', onClickBox)
+  $('#1').on('click', onClickBox)
+  $('#2').on('click', onClickBox)
+  $('#3').on('click', onClickBox)
+  $('#4').on('click', onClickBox)
+  $('#5').on('click', onClickBox)
+  $('#6').on('click', onClickBox)
+  $('#7').on('click', onClickBox)
+  $('#8').on('click', onClickBox)
 }
 module.exports = {
   addHandlers

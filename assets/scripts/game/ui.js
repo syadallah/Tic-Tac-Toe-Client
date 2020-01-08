@@ -8,8 +8,6 @@ const signUpFailure = function () {
   $('#failure-message').text('Sign up failed')
   // console.log(error)
 }
-//
-//
 
 // Sign -In
 const signInSuccess = function (response) {
@@ -52,8 +50,22 @@ const signOutFailure = function () {
   $('#message').text('sign Out Faild')
   // console.log(error)
 }
-const startGame = function (response) {
+const startGameSuccess = function (response) {
   $('.container').show()
+  $('#start-game').hide()
+  $('#message').hide()
+}
+
+const clickBoxSuccess = function (response) {
+  $('#0').html('X')
+  $('#1').html('X')
+  $('#2').html('X')
+  $('#3').html('X')
+  $('#4').html('X')
+  $('#5').html('X')
+  $('#6').html('X')
+  $('#7').html('X')
+  $('#8').html('X')
 }
 module.exports = {
   signUpSuccess,
@@ -64,5 +76,6 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure,
-  startGame
+  startGameSuccess,
+  clickBoxSuccess
 }

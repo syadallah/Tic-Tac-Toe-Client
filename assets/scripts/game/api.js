@@ -44,9 +44,34 @@ const signOut = function (data) {
   })
 }
 
+const startGame = function () {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {}
+
+  })
+}
+
+const xo = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/games/:id',
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+
+  })
+}
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  startGame,
+  xo
 }

@@ -28,45 +28,45 @@
       <div class="container">
 
   <div class="row">
-    <div class="col-4 box">1</div>
-    <div class="col-4 box">2</div>
-    <div class="col-4 box">3</div>
+    <div id=0 class="col-4 box"></div>
+    <div id=1 class="col-4 box"></div>
+    <div id=2 class="col-4 box"></div>
   </div>
 
   <div class="row">
-    <div class="col-4 box">4</div>
-    <div class="col-4 box">5</div>
-    <div class="col-4 box">6</div>
+    <div id=3 class="col-4 box"></div>
+    <div id=4 class="col-4 box"></div>
+    <div id=5 class="col-4 box"></div>
   </div>
 
   <div class="row">
-    <div class="col-4 box">7</div>
-    <div class="col-4 box">8</div>
-    <div class="col-4 box">9</div>
+    <div id=6 class="col-4 box"></div>
+    <div id=7 class="col-4 box"></div>
+    <div id=8 class="col-4 box"></div>
   </div>
 </div>
-
+<div class=logged-out>
 <form id='sign-in'>
-    <fieldset>
-    <legend>Sign In!</legend>
+  <fieldset>
+  <legend>Sign in</legend>
     <input name="credentials[email]" type='email' placeholder="Email">
     <input name="credentials[password]"type='password' placeholder="Password"/>
     <input class="btn btn-primary" type='submit' value='Sign In!'/>
-  </fieldset>
+</fieldset>
   </form>
 
 <h4 id=failure-message></h4>
 
 <form id='sign-up'>
       <fieldset>
-      <legend>Sign Up!</legend>
+      <legend>Sign up</legend>
       <input name="credentials[email]" type='email' placeholder="Email">
       <input name="credentials[password]"type='password' placeholder="Password"/>
       <input name="credentials[password_confirmation]" type='password' placeholder = 'password_confirmation'/>
       <input class="btn btn-secondary" type='submit' value='Sign up!'/>
     </fieldset>
     </form>
-
+</div>
     <form id='change-password'>
       <fieldset>
       <legend>change password!</legend>
@@ -78,7 +78,7 @@
 
     <form id='sign-out'>
       <fieldset>
-      <legend></legend>
+
       <input class="btn btn-primary" type='submit' value='Sign Out!'/>
     </fieldset>
     </form>
