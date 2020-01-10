@@ -1,4 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Seymour+One&display=swap');
 
 $alt-color: $cyan;
 $body-bg-color: $gray-200;
@@ -6,11 +7,16 @@ $font-color: $light;
 
 body {
   background-color: $body-bg-color;
-}
+  background-image: url('https://i.imgur.com/VgAG5SQ.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
 .logged-out {
-  background-color: #f2f2f2;
+  background-color: rgba(255,255,255,0.7);
   border-radius: 25px;
   padding: 20px;
+  border-style: hidden;
+  border-color: #f00;
 }
 .box {
   align-items: center;
@@ -28,12 +34,25 @@ body {
 }
 
 h1 {
+  font-family: 'Seymour One', sans-serif;
+  font-size: 60px;
   text-align: center;
-  background-color: #00f;
   color: #fff;
+  text-shadow: 4px 4px #00f;
 
 }
-
+#win-lose {
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #00f;
+}
+#taken {
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #00f;
+}
 #message {
   text-align: center;
   color: #4F8A10;
@@ -41,11 +60,48 @@ h1 {
 }
 
 #failure-message {
+  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
   color: #D8000C;
   background-color: #FFD2D2;
 }
-#start-game {
-  text-align: center;
+#start-game{
+text-align: center;
+color: #fff;
+border-color: #fff;
+border-width: 10px;
+}
+#reset{
+text-align: center;
+color: #fff;
+border-color: #fff;
+border-width: 10px;
+}
+#sign-out{
+text-align: center;
+color: #fff;
+border-color: #fff;
+border-width: 10px;
+}
+.container{
+  width:450px;
+  hight:450px;
+  margin-bottom: 50px;
+}
+
+.col-4 {
+font-size: 100px;
+color: #fff;
+font-family: sans-serif;
+font-weight: bold;
+cursor: pointer;
+}
+.clear {
+diplay: flex;
+justify-content:center;
+}
+button {
+    float: right;
+    width: calc(100% - 200px);
 }

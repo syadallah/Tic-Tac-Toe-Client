@@ -11,6 +11,8 @@ $(() => {
   $('#sign-out').hide()
   $('.container').hide()
   $('#start-game').hide()
+  $('.logged-in').hide()
+  $('#reset').hide()
   // your JS code goes here
   gameEvents.addHandlers()
 })

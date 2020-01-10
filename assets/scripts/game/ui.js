@@ -2,7 +2,9 @@
 const store = require('./../store')
 const signUpSuccess = function (response) {
   // console.log(response)
+  $('#sign-up')[0].reset()
   $('#message').text('Successfully signed up!')
+  $('#failure-message').hide()
 }
 const signUpFailure = function () {
   $('#failure-message').text('Sign up failed')
@@ -18,6 +20,9 @@ const signInSuccess = function (response) {
   $('#sign-out').show()
   $('#message').text('Successfully signed in!')
   $('#start-game').show()
+  $('.logged-out').hide()
+  $('#reset').hide()
+  $('#failure-message').hide()
   store.user = response.user
 }
 const signInFailure = function () {
@@ -29,8 +34,9 @@ const signInFailure = function () {
 
 // Change password
 const changePasswordSuccess = function (response) {
-  console.log(response)
+  $('#change-password')[0].reset()
   $('#message').text('Password Changed!')
+  $('#failure-message').hide()
 }
 const changePasswordFailure = function () {
   $('#failure-message').text('Failed to change password')
@@ -38,13 +44,15 @@ const changePasswordFailure = function () {
 }
 
 const signOutSuccess = function (response) {
-  console.log(response)
+  $('#sign-in')[0].reset()
   $('#message').text("You're signed out!")
   $('#sign-up').show()
   $('#sign-in').show()
   $('#change-password').hide()
   $('#sign-out').hide()
+  $('.logged-out').show()
   $('.container').hide()
+  $('#reset').hide()
 }
 const signOutFailure = function () {
   $('#message').text('sign Out Faild')
@@ -54,6 +62,9 @@ const startGameSuccess = function (response) {
   $('.container').show()
   $('#start-game').hide()
   $('#message').hide()
+  $('#change-password').hide()
+  $('#reset').show()
+  $('#failure-message').hide()
 }
 
 const clickBoxSuccess = function (response) {
