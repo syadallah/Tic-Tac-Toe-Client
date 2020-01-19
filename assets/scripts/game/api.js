@@ -56,17 +56,26 @@ const startGame = function () {
   })
 }
 
-const xo = function (data) {
+const xo = function (index = store.userInput, value = store.player1, over = store.gameIsOver) {
+  console.log(index, value, over)
   return $.ajax({
-    url: config.apiUrl + '/games/:id',
+    url: config.apiUrl + '/games/' + store.game.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: data
-
+    data:
+       {'game': {
+         'cell': {
+           'index': 0,
+           'value': 'x'
+         },
+         'over': over
+       }
+       }
   })
 }
+
 module.exports = {
   signUp,
   signIn,

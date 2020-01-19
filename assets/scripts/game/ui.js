@@ -18,11 +18,12 @@ const signInSuccess = function (response) {
   $('#sign-in').hide()
   $('#change-password').show()
   $('#sign-out').show()
-  $('#message').text('Successfully signed in!')
+  $('#message').html('Successfully signed in!')
   $('#start-game').show()
   $('.logged-out').hide()
   $('#reset').hide()
   $('#failure-message').hide()
+  $('#sign-out').hide()
   store.user = response.user
 }
 const signInFailure = function () {
@@ -49,10 +50,12 @@ const signOutSuccess = function (response) {
   $('#sign-up').show()
   $('#sign-in').show()
   $('#change-password').hide()
-  $('#sign-out').hide()
   $('.logged-out').show()
   $('.container').hide()
   $('#reset').hide()
+  $('#win-lose').hide()
+  $('#draw').hide()
+  $('#sign-out').hide()
 }
 const signOutFailure = function () {
   $('#message').text('sign Out Faild')
@@ -65,18 +68,19 @@ const startGameSuccess = function (response) {
   $('#change-password').hide()
   $('#reset').show()
   $('#failure-message').hide()
+  $('#sign-out').show()
+  $('.box').text('')
+  $('#win-lose').hide()
+  $('#draw').hide()
+  store.game = response.game
 }
 
 const clickBoxSuccess = function (response) {
-  $('#0').html('X')
-  $('#1').html('X')
-  $('#2').html('X')
-  $('#3').html('X')
-  $('#4').html('X')
-  $('#5').html('X')
-  $('#6').html('X')
-  $('#7').html('X')
-  $('#8').html('X')
+
+}
+
+const clickBoxFailure = function (response) {
+  $('#message').text('Click Faild')
 }
 module.exports = {
   signUpSuccess,
@@ -88,5 +92,6 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   startGameSuccess,
-  clickBoxSuccess
+  clickBoxSuccess,
+  clickBoxFailure
 }

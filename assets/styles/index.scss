@@ -11,20 +11,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   }
-.logged-out {
-  background-color: rgba(255,255,255,0.7);
-  border-radius: 25px;
-  padding: 20px;
-  border-style: hidden;
-  border-color: #f00;
-}
+
 .box {
   align-items: center;
-  background-color: $secondary;
-  border: 1px solid $white;
+  background-color: #468091;
+  border: 2px solid #0c2e38;
   color: $font-color;
   display: flex;
-  height: 80px;
+  height: 110px;
+  width: 110px;
   justify-content: center;
   cursor: pointer;
 }
@@ -35,28 +30,25 @@ body {
 
 h1 {
   font-family: 'Seymour One', sans-serif;
-  font-size: 60px;
+  font-size: 65px;
   text-align: center;
   color: #fff;
-  text-shadow: 4px 4px #00f;
+  text-shadow: 4px 4px 4px #0c2e38;
+}
 
-}
-#win-lose {
+#win-lose, #draw, #taken {
   font-weight: bold;
   text-align: center;
   color: #fff;
-  background-color: #00f;
+  margin: 20px 710px;
+  background-color: #0c2e38;
 }
-#taken {
-  font-weight: bold;
-  text-align: center;
-  color: #fff;
-  background-color: #00f;
-}
+
 #message {
   text-align: center;
   color: #4F8A10;
   background-color: #DFF2BF;
+  margin: 20px 710px;
 }
 
 #failure-message {
@@ -65,29 +57,13 @@ h1 {
 	font-size: 20px;
   color: #D8000C;
   background-color: #FFD2D2;
+  margin: 30px 650px;
 }
-#start-game{
-text-align: center;
-color: #fff;
-border-color: #fff;
-border-width: 10px;
-}
-#reset{
-text-align: center;
-color: #fff;
-border-color: #fff;
-border-width: 10px;
-}
-#sign-out{
-text-align: center;
-color: #fff;
-border-color: #fff;
-border-width: 10px;
-}
-.container{
-  width:450px;
-  hight:450px;
-  margin-bottom: 50px;
+
+.container {
+width: 450px;
+hight: 450px;
+margin-bottom: 50px;
 }
 
 .col-4 {
@@ -95,13 +71,35 @@ font-size: 100px;
 color: #fff;
 font-family: sans-serif;
 font-weight: bold;
+text-shadow: 4px 4px 4px  #0c2e38;
 cursor: pointer;
 }
+
 .clear {
-diplay: flex;
-justify-content:center;
+height: 40px;
+width: 25%;
+max-width: 420px;
+padding: 5px;
+margin: 5px 710px;
+box-sizing: border-box;
+background-clip: padding-box;
+border: 1px solid #ced4da;
+border-radius: .35rem;
 }
+
+.btn {
+height: 40px;
+width: 25%;
+max-width: 420px;
+padding: 5px;
+margin: 20px 710px;
+box-sizing: border-box;
+background-clip: padding-box;
+border: 1px solid #ced4da;
+border-radius: .35rem;
+}
+
 button {
-    float: right;
-    width: calc(100% - 200px);
+float: right;
+width: calc(100% - 200px);
 }
