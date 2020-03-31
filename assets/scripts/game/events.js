@@ -18,7 +18,6 @@ const onSignUp = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormsFields(form)
-  console.log(data)
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
@@ -74,7 +73,6 @@ const onClickBox = function (event) {
     winCheck()
     drawCheck()
     switchPlayers()
-    console.log(board)
   } else {
     alert('Position has been taken! Try again.')
   }
@@ -85,34 +83,66 @@ const winCheck = function () {
     gameIsOver = true
     $('#win-lose').html(`${player1} WON!`)
     $('#win-lose').show()
+    setTimeout(function () {
+      $('#win-lose').slideUp('slow')
+    }, 2000)
+    onResetFunction(event)
   } else if (board[0] !== '' && board[0] === board[3] && board[0] === board[6]) {
     gameIsOver = true
     $('#win-lose').html(`${player1} WON!`)
     $('#win-lose').show()
+    onResetFunction()
+    setTimeout(function () {
+      $('#win-lose').slideUp('slow')
+    }, 2000)
   } else if (board[1] !== '' && board[1] === board[4] && board[1] === board[7]) {
     gameIsOver = true
     $('#win-lose').html(`${player1} WON!`)
     $('#win-lose').show()
+    onResetFunction(event)
+    setTimeout(function () {
+      $('#win-lose').slideUp('slow')
+    }, 2000)
   } else if (board[2] !== '' && board[2] === board[5] && board[2] === board[8]) {
     gameIsOver = true
     $('#win-lose').html(`${player1} WON!`)
     $('#win-lose').show()
+    onResetFunction(event)
+    setTimeout(function () {
+      $('#win-lose').slideUp('slow')
+    }, 2000)
   } else if (board[2] !== '' && board[2] === board[4] && board[2] === board[6]) {
     gameIsOver = true
     $('#win-lose').html(`${player1} WON!`)
     $('#win-lose').show()
+    onResetFunction(event)
+    setTimeout(function () {
+      $('#win-lose').slideUp('slow')
+    }, 2000)
   } else if (board[3] !== '' && board[3] === board[4] && board[3] === board[5]) {
     gameIsOver = true
     $('#win-lose').html(`${player1} WON!`)
     $('#win-lose').show()
+    onResetFunction(event)
+    setTimeout(function () {
+      $('#win-lose').slideUp('slow')
+    }, 2000)
   } else if (board[6] !== '' && board[6] === board[7] && board[6] === board[8]) {
     gameIsOver = true
     $('#win-lose').html(`${player1} WON!`)
     $('#win-lose').show()
+    onResetFunction(event)
+    setTimeout(function () {
+      $('#win-lose').slideUp('slow')
+    }, 2000)
   } else if (board[0] !== '' && board[0] === board[4] && board[0] === board[8]) {
     gameIsOver = true
     $('#win-lose').html(`${player1} WON!`)
     $('#win-lose').show()
+    onResetFunction(event)
+    setTimeout(function () {
+      $('#win-lose').slideUp('slow')
+    }, 2000)
   }
 }
 
@@ -120,8 +150,6 @@ const drawCheck = function () {
   if (moveCount === 9 && gameIsOver === false) {
     $('#draw').html('Draw!')
     $('#draw').show()
-    console.log('Draw')
-    console.log(gameIsOver)
   }
 }
 const onResetFunction = function (event) {

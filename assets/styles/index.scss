@@ -14,7 +14,7 @@ body {
 
 .box {
   align-items: center;
-  background-color: #468091;
+  background-color: #FF6347;
   border: 2px solid #0c2e38;
   color: $font-color;
   display: flex;
@@ -30,42 +30,53 @@ body {
 
 h1 {
   font-family: 'Seymour One', sans-serif;
-  font-size: 65px;
+  font-size: 4rem;
   text-align: center;
   color: #fff;
   text-shadow: 4px 4px 4px #0c2e38;
 }
 
 #win-lose, #draw, #taken {
+  font-family: 'Seymour One', sans-serif;
   font-weight: bold;
   text-align: center;
+  font-size: 1.2rem;
   color: #fff;
-  margin: 20px 710px;
+  margin: 0.5rem auto;
   background-color: #0c2e38;
+
 }
 
 #message {
+  font-family: 'Seymour One', sans-serif;
   text-align: center;
+  font-size: 1.2rem;
   color: #4F8A10;
   background-color: #DFF2BF;
-  margin: 20px 710px;
+  margin: 0.5rem auto;
 }
 
 #failure-message {
+  font-family: 'Seymour One', sans-serif;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-	font-size: 20px;
+	font-size: 1.2rem;
   color: #D8000C;
   background-color: #FFD2D2;
-  margin: 30px 650px;
+  margin: 0.5rem auto;
 }
 
 .container {
-width: 450px;
-hight: 450px;
+
+max-width: 450px;
+max-height: 450px;
 margin-bottom: 50px;
 }
-
+@media only screen and (max-width: 500px) {
+  .container {
+  width: 300px;
+  height: 300px;
+}
+}
 .col-4 {
 font-size: 100px;
 color: #fff;
@@ -77,29 +88,16 @@ cursor: pointer;
 
 .clear {
 height: 40px;
-width: 25%;
+display: flex;
+flex-wrap: wrap;
+width: 70%;
 max-width: 420px;
 padding: 5px;
-margin: 5px 710px;
-box-sizing: border-box;
-background-clip: padding-box;
-border: 1px solid #ced4da;
+margin: 0.5rem auto;
+align-items: center;
+border: 1px solid #000;
 border-radius: .35rem;
 }
-
-.btn {
-height: 40px;
-width: 25%;
-max-width: 420px;
-padding: 5px;
-margin: 20px 710px;
-box-sizing: border-box;
-background-clip: padding-box;
-border: 1px solid #ced4da;
-border-radius: .35rem;
-}
-
-button {
-float: right;
-width: calc(100% - 200px);
+#btn {
+  text-align: center;
 }

@@ -1,34 +1,23 @@
 'use strict'
 const store = require('./../store')
 const signUpSuccess = function (response) {
-  // console.log(response)
   $('#sign-up')[0].reset()
-  $('#message').text('Successfully signed up!')
+  $('#message').html('Successfully signed up!')
   $('#failure-message').hide()
 }
 const signUpFailure = function () {
   $('#failure-message').text('Sign up failed')
-  // console.log(error)
 }
 
 // Sign -In
 const signInSuccess = function (response) {
-  console.log(response)
-  $('#sign-up').hide()
-  $('#sign-in').hide()
-  $('#change-password').show()
-  $('#sign-out').show()
   $('#message').html('Successfully signed in!')
-  $('#start-game').show()
-  $('.logged-out').hide()
-  $('#reset').hide()
-  $('#failure-message').hide()
-  $('#sign-out').hide()
+  $('#sign-up, #sign-in, .logged-out, #reset, #failure-message').hide()
+  $('#start-game,#sign-out, #change-password').show()
   store.user = response.user
 }
 const signInFailure = function () {
   $('#failure-message').text('The username and/or password you specified are not correct')
-  // console.log(error)
 }
 //
 //
@@ -41,37 +30,22 @@ const changePasswordSuccess = function (response) {
 }
 const changePasswordFailure = function () {
   $('#failure-message').text('Failed to change password')
-  // console.log(error)
 }
 
 const signOutSuccess = function (response) {
   $('#sign-in')[0].reset()
   $('#message').text("You're signed out!")
-  $('#sign-up').show()
-  $('#sign-in').show()
-  $('#change-password').hide()
-  $('.logged-out').show()
-  $('.container').hide()
-  $('#reset').hide()
-  $('#win-lose').hide()
-  $('#draw').hide()
-  $('#sign-out').hide()
+  $('#sign-up, #sign-in, .logged-out').show()
+  $('#change-password, .container, #reset, #win-lose, #draw, #sign-out, #start-game').hide()
 }
 const signOutFailure = function () {
   $('#message').text('sign Out Faild')
-  // console.log(error)
 }
 const startGameSuccess = function (response) {
-  $('.container').show()
-  $('#start-game').hide()
-  $('#message').hide()
-  $('#change-password').hide()
-  $('#reset').show()
-  $('#failure-message').hide()
-  $('#sign-out').show()
+  $('.container, #reset, #sign-out').show()
+  $('#start-game, #message, #change-password, #failure-message, #draw ').hide()
   $('.box').text('')
-  $('#win-lose').hide()
-  $('#draw').hide()
+
   store.game = response.game
 }
 

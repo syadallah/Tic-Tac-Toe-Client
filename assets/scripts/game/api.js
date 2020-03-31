@@ -21,7 +21,6 @@ const signIn = function (data) {
 }
 
 const changePassword = function (data) {
-  // console.log(data) print on the dom the new and old password
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
@@ -57,7 +56,6 @@ const startGame = function () {
 }
 
 const xo = function (index = store.userInput, value = store.player1, over = store.gameIsOver) {
-  console.log(index, value, over)
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game.id,
     method: 'PATCH',
