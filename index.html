@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic-Tac-Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1>Tic-Tac-Toe</h1>
+      <br>
+      <h3 id=taken></h3>
+      <h3 id=win-lose></h3>
+      <h3 id=draw></h3>
+      <h4 id=message></h4>
+      <h4 id=failure-message></h4>
+      <br>
+
+  <form id=start-game>
+        <input class="btn btn-primary clear" type='submit' value='START GAME'/>
+  </form>
+  <div class="container">
+
+  <div class="row">
+    <div id=0 class="col-4 box"></div>
+    <div id=1 class="col-4 box"></div>
+    <div id=2 class="col-4 box"></div>
+  </div>
+
+  <div class="row">
+    <div id=3 class="col-4 box"></div>
+    <div id=4 class="col-4 box"></div>
+    <div id=5 class="col-4 box"></div>
+  </div>
+
+  <div class="row">
+    <div id=6 class="col-4 box"></div>
+    <div id=7 class="col-4 box"></div>
+    <div id=8 class="col-4 box"></div>
+  </div>
+</div>
+<form id='reset'>
+    <input type='submit' class="btn btn-primary clear"  value="Reset Game">
+</form>
+<form id=sign-out>
+  <input class="btn btn-danger clear" type='submit' value='SIGN OUT!'/>
+</form>
+
+<form id='sign-in'>
+  <fieldset>
+    <input class='clear' name="credentials[email]" type='email' autocomplete="on" placeholder="Email">
+    <input class='clear' name="credentials[password]"type='password' placeholder="Password"/>
+    <input class="clear btn btn-primary" type='submit' value='Sign In!'/>
+</fieldset>
+</form>
+<br>
+<br>
+<form id=sign-up>
+      <fieldset>
+      <input class='clear' name="credentials[email]" type='email' placeholder="Email">
+      <input class='clear' name="credentials[password]"type='password' placeholder="Password"/>
+      <input class='clear' name="credentials[password_confirmation]" type='password' placeholder = 'password_confirmation'/>
+      <input class="btn btn-primary clear" type='submit' value='Sign up!'>
+    </fieldset>
+    </form>
+
+    <form id='change-password'>
+      <fieldset>
+      <input class='clear' name="passwords[old]" type='password' placeholder="Old Password">
+      <input class='clear' name="passwords[new]"type='password' placeholder="New Password"/>
+      <input class="btn btn-primary clear" type='submit' value='Change Password'/>
+    </fieldset>
+    </form>
+<br>
+<br>
+<br>
+
+    </body>
+</html>
