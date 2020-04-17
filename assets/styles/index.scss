@@ -1,10 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Seymour+One&display=swap');
 
-$alt-color: $cyan;
-$body-bg-color: $gray-200;
-$font-color: $light;
-
 body {
   background-color: $body-bg-color;
   background-image: url('https://i.imgur.com/VgAG5SQ.jpg');
@@ -16,7 +12,6 @@ body {
   align-items: center;
   background-color: #FF6347;
   border: 2px solid #0c2e38;
-  color: $font-color;
   display: flex;
   height: 110px;
   width: 110px;
