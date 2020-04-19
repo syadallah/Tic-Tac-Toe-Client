@@ -2,7 +2,7 @@
 const store = require('./../store')
 const signUpSuccess = function (response) {
   $('#sign-up')[0].reset()
-  $('#message').html('Successfully signed up!')
+  $('#message').html('Successfully signed up')
   $('#failure-message').hide()
 }
 const signUpFailure = function () {
@@ -11,7 +11,7 @@ const signUpFailure = function () {
 
 // Sign -In
 const signInSuccess = function (response) {
-  $('#message').html('Successfully signed in!')
+  $('#message').html('Successfully signed in')
   $('#sign-up, #sign-in, .logged-out, #reset, #failure-message').hide()
   $('#start-game,#sign-out, #change-password').show()
   store.user = response.user
@@ -34,7 +34,7 @@ const changePasswordFailure = function () {
 
 const signOutSuccess = function (response) {
   $('#sign-in')[0].reset()
-  $('#message').text("You're signed out!")
+  $('#message').text("You're signed out")
   $('#sign-up, #sign-in, .logged-out').show()
   $('#change-password, .container, #reset, #win-lose, #draw, #sign-out, #start-game').hide()
 }
